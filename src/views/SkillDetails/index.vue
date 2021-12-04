@@ -1,11 +1,13 @@
 <template>
-  <div>
-    S D
-  </div>
+  <div>{{ $route.params.id }}</div>
 </template>
 
 <script>
-export default {};
+export default {
+  mounted() {
+    console.log(this.$route.params.id);
+  },
+};
 </script>
 
 <style></style>

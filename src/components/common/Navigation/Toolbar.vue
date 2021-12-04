@@ -3,7 +3,7 @@
     <v-spacer></v-spacer>
     <div class="d-none d-sm-flex align-center">
       <v-btn
-        id="text-content-jp"
+        id="text-jp"
         v-for="(item, index) in NAVIGATION_LIST"
         :key="index"
         :to="item.to ? item.to : undefined"

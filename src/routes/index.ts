@@ -32,7 +32,7 @@ const routes: Array<RouteConfig> = [
         component: () => import('../views/Skills/index.vue')
     },
     {
-        path: '/detail/skill/:name',
+        path: '/detail/skill/:id',
         name: 'SkillDetails',
         component: () => import('../views/SkillDetails/index.vue')
     },
