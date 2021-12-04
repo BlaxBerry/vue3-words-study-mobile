@@ -43,6 +43,16 @@
         </v-hover>
       </v-col>
     </v-row>
+
+    <v-col></v-col>
+
+    <div class="text-center">
+      <v-pagination
+        v-model="page"
+        :length="15"
+        :total-visible="7"
+      ></v-pagination>
+    </div>
   </div>
 </template>
 
@@ -56,12 +66,13 @@ export default Vue.extend({
 
   data: () => ({
     ELEVATIONS,
+    page: 1,
   }),
 
   methods: {
     goDetailPage(id: any) {
       console.log(id);
-      this.$router.push(`/works/${id}`);
+      this.$router.push(`/detail/work/${id}`);
     },
   },
 });

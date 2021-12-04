@@ -20,7 +20,22 @@ const routes: Array<RouteConfig> = [
         path: '/works',
         name: 'Works',
         component: () => import('../views/Works/index.vue')
-    }
+    },
+    {
+        path: '/detail/work/:name',
+        name: 'WorkDetails',
+        component: () => import('../views/WorkDetails/index.vue')
+    },
+    {
+        path: '/skills',
+        name: 'Skills',
+        component: () => import('../views/Skills/index.vue')
+    },
+    {
+        path: '/detail/skill/:name',
+        name: 'SkillDetails',
+        component: () => import('../views/SkillDetails/index.vue')
+    },
 ]
 
 export default routes
