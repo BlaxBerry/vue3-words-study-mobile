@@ -70,7 +70,7 @@ export default Vue.extend({
   }),
 
   methods: {
-    goDetailPage(id: any) {
+    goDetailPage(id: string) {
       console.log(id);
       this.$router.push(`/detail/work/${id}`);
     },
@@ -80,17 +80,4 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 @import "/src/styles/index.scss";
-
-.v-card {
-  cursor: pointer;
-  .v-sheet {
-    height: 100%;
-    transition: $transition;
-    @include background-transparent;
-    @include center;
-  }
-  .v-sheet.on-hover {
-    @include background-anti-transparent;
-  }
-}
 </style>

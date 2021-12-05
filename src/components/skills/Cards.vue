@@ -2,11 +2,11 @@
   <v-row class="px-2">
     <v-col
       v-for="item in list"
-      :key="item.name"
+      :key="item.id"
       class="d-flex child-flex pa-1"
-      cols="3"
+      cols="2"
       sm="2"
-      md="2"
+      md="1"
       lg="1"
     >
       <v-tooltip bottom>

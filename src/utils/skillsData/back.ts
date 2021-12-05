@@ -4,33 +4,24 @@ export const BACK = [
         name: "Node.js",
         id: "node",
         type: "SERVER",
+        showAsMain: true,
         fileName: "server-nodejs.svg",
         relevance: [
             "Express.js",
             "MongoDB",
-            "GrapgQL"
+            "GraphQL"
         ]
     },
     {
         name: "Express.js",
         id: "express",
         type: "SERVER",
+        showAsMain: true,
         fileName: "server-nodejs-express.svg",
         relevance: [
             "Node.js",
             "MongoDB",
-            "GrapgQL"
-        ]
-    },
-    {
-        name: "Koa.js",
-        id: "koa",
-        type: "SERVER",
-        fileName: "server-koa.svg",
-        relevance: [
-            "Node.js",
-            "Express.js",
-            "MongoDB",
+            "GraphQL"
         ]
     },
 
@@ -39,6 +30,7 @@ export const BACK = [
         name: "Ruby",
         id: "ruby",
         type: "LANG",
+        showAsMain: true,
         fileName: "lang-ruby.svg",
         relevance: [
             "Node.js",
@@ -49,6 +41,7 @@ export const BACK = [
         name: "Ruby on Rails",
         id: "ruby-on-rails",
         type: "SERVER",
+        showAsMain: true,
         fileName: "server-ruby-on-rails.svg",
         relevance: [
             "Ruby",
@@ -62,6 +55,7 @@ export const BACK = [
         name: "Python",
         id: "python",
         type: "LANG",
+        showAsMain: true,
         fileName: "lang-python.svg",
         relevance: [
             "Ruby",
@@ -75,6 +69,7 @@ export const BACK = [
         name: "MongoDB",
         id: "mongodb",
         type: "DB",
+        showAsMain: true,
         fileName: "db-mongodb.svg",
         relevance: [
             "Node.js",
@@ -85,6 +80,7 @@ export const BACK = [
         name: "MySQL",
         id: "mysql",
         type: "DB",
+        showAsMain: true,
         fileName: "db-mysql.svg",
         relevance: [
             "Node.js",
@@ -95,6 +91,7 @@ export const BACK = [
         name: "PostgreSQL",
         id: "postgresql",
         type: "DB",
+        showAsMain: true,
         fileName: "db-postgresql.svg",
         relevance: [
             "Node.js",
@@ -103,14 +100,14 @@ export const BACK = [
     },
 
     // nuxt
-    // {
-    //     name: "Nuxt.js",
-    //     id: "nuxt",
-    //     type: "SERVER",
-    //     fileName: "vue-nuxt.svg",
-    //     relevance: [
-    //         "Vue.js",
-    //         "Node.js"
-    //     ]
-    // },
+    {
+        name: "Nuxt.js",
+        id: "nuxt",
+        type: "SERVER",
+        fileName: "vue-nuxt.svg",
+        relevance: [
+            "Vue.js",
+            "Node.js"
+        ]
+    },
 ]

@@ -30,12 +30,12 @@
   </v-navigation-drawer>
 </template>
 
-<script>
+<script lang="ts">
 // common variables
 import { ELEVATIONS } from "@/utils/commonVariables/index";
 import { NAVIGATION_LIST } from "@/utils/layoutDefaultData/index";
 export default {
-  data: () => ({
+  data: (): unknown => ({
     ELEVATIONS,
     NAVIGATION_LIST,
     group: null,

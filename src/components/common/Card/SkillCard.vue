@@ -25,19 +25,20 @@
   </v-card>
 </template>
 
-<script lang="ts">
+<script>
 import { ELEVATIONS } from "@/utils/commonVariables/index";
 export default {
   props: ["hover", "on", "attrs", "item"],
   data: () => ({
     ELEVATIONS,
   }),
+
   methods: {
-    goDetailPage(id: string) {
-      this.$router.push(`/detail/skill/${id}`);
+    goDetailPage(id) {
+      this.$router.push(`/detail/skill/${id}`).catch((err) => {
+        console.log("skills card go detail page", err);
+      });
     },
   },
 };
 </script>
-
-<style></style>

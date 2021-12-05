@@ -1,7 +1,7 @@
+@import "./variables.scss";
 @import "./common.scss";
 @import "./mixin.scss";
-@import "./variables.scss";
 
 .theme--dark {
-  color: #bdbdbd !important;
+  color: $color3 !important;
 }

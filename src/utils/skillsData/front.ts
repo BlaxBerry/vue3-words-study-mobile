@@ -3,18 +3,21 @@ export const FRONT = [
         name: "HTML5",
         id: "html",
         type: "BASIC",
+        showAsMain: true,
         fileName: "html.svg",
         relevance: [
-
+            "CSS3",
+            "JavaScript"
         ]
     },
     {
         name: "CSS3",
         id: "css",
         type: "BASIC",
+        showAsMain: true,
         fileName: "css.svg",
         relevance: [
-            "bootstrap",
+            "Bootstrap",
             "Sass",
             "Less",
             "Vuetify",
@@ -28,9 +31,10 @@ export const FRONT = [
         name: "Sass",
         id: "sass",
         type: "BASIC",
+        showAsMain: true,
         fileName: "css-sass.svg",
         relevance: [
-            "CSS",
+            "CSS3",
             "Less",
             "Vuetify",
             "ElementUI",
@@ -40,9 +44,42 @@ export const FRONT = [
         ]
     },
     {
+        name: "Less",
+        id: "less",
+        type: "BASIC",
+        fileName: "css-less.svg",
+        relevance: [
+            "CSS3",
+            "Sass",
+            "Vuetify",
+            "ElementUI",
+            "Vant",
+            "AntDesign",
+            "MaterialUI"
+        ]
+    },
+    {
+        name: "Bootstrap",
+        id: "bootstrap",
+        type: "BASIC",
+        fileName: "css-bootstrap.svg",
+        relevance: [
+            "CSS3",
+            "Sass",
+            "Less",
+            "Vuetify",
+            "ElementUI",
+            "Vant",
+            "AntDesign",
+            "MaterialUI"
+        ]
+    },
+
+    {
         name: "jQuery",
         id: "jquery",
         type: "BASIC",
+        showAsMain: true,
         fileName: "jquery.svg",
         relevance: [
             "JavaScript",
@@ -57,6 +94,7 @@ export const FRONT = [
         name: "JavaScript",
         id: "javascript",
         type: "BASIC",
+        showAsMain: true,
         fileName: "lang-javascript.svg",
         relevance: [
             "TypeScript",
@@ -72,8 +110,11 @@ export const FRONT = [
         name: "TypeScript",
         id: "typescript",
         type: "BASIC",
+        showAsMain: true,
         fileName: "lang-typescript.svg",
-        relevance: []
+        relevance: [
+            "JavaScript"
+        ]
     },
 
     // vue
@@ -81,14 +122,14 @@ export const FRONT = [
         name: "Vue.js",
         id: "vue",
         type: "VUE",
+        showAsMain: true,
         fileName: "vue.svg",
         relevance: [
-            "Vue-Cli",
+            "Vite",
             "Vue-Router",
             "Vuex",
-            "Vite",
             "VuePress",
-            "Nuxt",
+            "Nuxt.js",
             "Vuetify",
             "ElementUI",
             "Vant"
@@ -98,54 +139,104 @@ export const FRONT = [
         name: "Vite",
         id: "vite",
         type: "VUE",
+        showAsMain: true,
         fileName: "vue-vite.svg",
         relevance: [
             "Vue.js",
-            "Vue-Cli",
             "Vue-Router",
             "Vuex",
             "VuePress",
-            "Nuxt",
+            "Nuxt.js",
         ],
     },
     // {
-    //     name: "Vue-Router",
-    //     id: "vue-router",
+    //     name: "Vue-Cli",
+    //     id: "vue-cli",
     //     type: "VUE",
-    //     fileName: "vue-router.svg",
+    //     fileName: "vue.svg",
     //     relevance: [
     //         "Vue.js",
-    //         "Vue-Cli",
-    //         "Vuex",
     //         "Vite",
-    //         "VuePress",
-    //         "Nuxt",
+    //         "Vuex"
     //     ],
     // },
+    {
+        name: "Vue-Router",
+        id: "vue-router",
+        type: "VUE",
+        fileName: "vue-router.svg",
+        relevance: [
+            "Vue.js",
+            "Vuex",
+            "Vite",
+            "VuePress",
+            "Nuxt.js",
+        ],
+    },
     {
         name: "Vuex",
         id: "vuex",
         type: "VUE",
+        showAsMain: true,
         fileName: "vue-vuex.svg",
         relevance: [
             "Vue.js",
-            "Vue-Cli",
             "Vite",
             "Vue-Router",
             "VuePress",
-            "Nuxt",
+            "Nuxt.js",
         ],
     },
     {
         name: "VuePress",
         id: "vuepress",
         type: "VUE",
+        showAsMain: true,
         fileName: "vue-vuepress.svg",
         relevance: [
             "Vue.js",
-            "Vue-Cli",
             "Vite",
-            "Nuxt",
+            "Nuxt.js",
+            "Gatsby.js"
+        ],
+    },
+    {
+        name: "Vuetify",
+        id: "vuetifyi",
+        type: "VUE",
+        fileName: "vue-ui-vuetify.svg",
+        relevance: [
+            "Vue.js",
+            "ElementUI",
+            "Vant",
+            "AntDesign",
+            "MaterialUI"
+        ],
+    },
+    {
+        name: "ElementUI",
+        id: "element-ui",
+        type: "VUE",
+        fileName: "vue-ui-element.svg",
+        relevance: [
+            "Vue.js",
+            "Vuetify",
+            "Vant",
+            "AntDesign",
+            "MaterialUI"
+        ],
+    },
+    {
+        name: "Vant",
+        id: "vant-ui",
+        type: "VUE",
+        fileName: "vue-ui-vant.svg",
+        relevance: [
+            "Vue.js",
+            "Vuetify",
+            "ElementUI",
+            "AntDesign",
+            "MaterialUI"
         ],
     },
 
@@ -154,30 +245,44 @@ export const FRONT = [
         name: "React.js",
         id: "react",
         type: "REACT",
+        showAsMain: true,
         fileName: "react.svg",
         relevance: [
             "Create-React-App",
             "React-Router-Dom",
             "Redux",
+            "GraphQL",
             "AntDesign",
             "MaterialUI"
         ]
     },
-    // {
-    //     name: "React-Router-Dom",
-    //     id: "react-router-dom",
-    //     type: "REACT",
-    //     fileName: "react-router-dom.svg",
-    //     relevance: [
-    //         "React.js",
-    //         "Create-React-App",
-    //         "Redux",
-    //     ]
-    // },
+    {
+        name: "Create-React-App",
+        id: "create-react-app",
+        type: "REACT",
+        fileName: "react-cli.svg",
+        relevance: [
+            "React.js",
+            "React-Router-Dom",
+            "Redux",
+        ]
+    },
+    {
+        name: "React-Router-Dom",
+        id: "react-router-dom",
+        type: "REACT",
+        fileName: "react-router-dom.svg",
+        relevance: [
+            "React.js",
+            "Create-React-App",
+            "Redux",
+        ]
+    },
     {
         name: "Redux",
         id: "redux",
         type: "REACT",
+        showAsMain: true,
         fileName: "react-redux.svg",
         relevance: [
             "React.js",
@@ -189,10 +294,32 @@ export const FRONT = [
         name: "Gatsby.js",
         id: "gatsby",
         type: "REACT",
+        showAsMain: true,
         fileName: "react-gatsby.svg",
         relevance: [
             "React.js",
             "VuePress",
+            "GraphQL"
+        ]
+    },
+    {
+        name: "AntDesign",
+        id: "antdesign",
+        type: "REACT",
+        fileName: "react-ui-antdesign.svg",
+        relevance: [
+            "React.js",
+            "MaterialUI"
+        ]
+    },
+    {
+        name: "MaterialUI",
+        id: "material-ui",
+        type: "REACT",
+        fileName: "react-ui-material.svg",
+        relevance: [
+            "React.js",
+            "AntDesign",
         ]
     },
 ]
