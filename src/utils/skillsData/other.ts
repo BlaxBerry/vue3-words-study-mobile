@@ -78,7 +78,7 @@ export const OTHER = [
 
     // electron
     {
-        name: "electron",
+        name: "Electron",
         id: "electron",
         type: "APP",
         showAsMain: true,

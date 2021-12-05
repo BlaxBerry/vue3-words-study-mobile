@@ -5,3 +5,41 @@
 #text-jp {
   font-family: "NotoSerifJP-Regular" !important;
 }
+
+.work-card {
+  .v-card {
+    z-index: 2;
+    transition: 0.8s;
+  }
+  // h3 {
+  //   z-index: 0;
+  //   transition: 0.8s;
+  // }
+  &:hover {
+    .v-card {
+      transform: scale(1.025);
+      .v-img {
+        transform: scale(1.025);
+      }
+    }
+    // h3 {
+    //   transform: translateY(8%);
+    // }
+  }
+}
+
+.hidden {
+  animation: hidden 1.5s linear forwards;
+}
+@keyframes hidden {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+    width: 0;
+    display: none;
+  }
+}

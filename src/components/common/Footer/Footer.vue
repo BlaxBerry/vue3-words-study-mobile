@@ -1,5 +1,5 @@
 <template>
-  <v-footer padless>
+  <v-footer padless v-if="!$route.meta.hidenFooter">
     <v-card dark flat tile width="100%" class="text-center">
       <v-card-text>
         <v-btn v-for="icon in icons" :key="icon" class="mx-2" icon>

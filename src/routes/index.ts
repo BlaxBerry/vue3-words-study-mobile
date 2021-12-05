@@ -4,7 +4,10 @@ import Home from '../views/Home/index.vue'
 const routes: Array<RouteConfig> = [
     {
         path: '*',
-        component: () => import('../views/404.vue')
+        component: () => import('../views/404.vue'),
+        meta: {
+            hidenFooter: true
+        }
     },
     {
         path: '/',
@@ -22,7 +25,7 @@ const routes: Array<RouteConfig> = [
         component: () => import('../views/Works/index.vue')
     },
     {
-        path: '/detail/work/:name',
+        path: '/detail/work/:id',
         name: 'WorkDetails',
         component: () => import('../views/WorkDetails/index.vue')
     },

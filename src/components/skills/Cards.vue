@@ -5,9 +5,7 @@
       :key="item.id"
       class="d-flex child-flex pa-1"
       cols="2"
-      sm="2"
-      md="1"
-      lg="1"
+      sm="1"
     >
       <v-tooltip bottom>
         <template v-slot:activator="{ on, attrs }">
