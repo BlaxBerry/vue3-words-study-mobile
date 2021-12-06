@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div
+    <!-- <div
       class="404 d-flex flex-column justify-center align-center pb-4"
       :style="{ width: '100%' }"
     >
@@ -9,7 +9,7 @@
         alt="404"
         :class="{ hidden: hiddenGif }"
       />
-    </div>
+    </div> -->
 
     <v-sheet>
       下面是ress在默认 normalize.css 功能的情况下附加提供的 功能 列表 应用

@@ -1,5 +1,11 @@
 <template>
-  <v-navigation-drawer v-model="$store.state.showDrawer" fixed right temporary>
+  <v-navigation-drawer
+    v-model="$store.state.showDrawer"
+    fixed
+    right
+    temporary
+    class="font-weight-black"
+  >
     <v-toolbar :elevation="ELEVATIONS.BAR_ELEVATION">
       <!-- <v-btn
         id="logo-text"

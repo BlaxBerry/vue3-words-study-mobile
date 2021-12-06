@@ -1,11 +1,11 @@
 <template>
-  <v-app>
+  <v-app class="text-jp">
     <!-- top bar -->
     <Toolbar />
 
     <!-- right navigation drawer -->
     <Drawer />
-    
+
     <!-- main views-->
     <v-container>
       <v-main>

@@ -1,5 +1,5 @@
 <template>
-  <div class="work-card">
+  <v-sheet class="work-card">
     <v-card
       :elevation="
         hover ? ELEVATIONS.CARD_ELEVATION * 2 : ELEVATIONS.CARD_ELEVATION
@@ -12,8 +12,8 @@
 
       <!-- img -->
       <v-img
-        :src="item.pics[0]"
         class="grey lighten-2"
+        :src="item.pics[0]"
         :lazy-src="
           item.type == 'PC'
             ? require(`@/assets/images/works/default-pc.png`)
@@ -32,7 +32,7 @@
     </v-card>
     <!-- name -->
     <h3 class="text-center mt-2" id="text-jp">{{ item.name }}</h3>
-  </div>
+  </v-sheet>
 </template>
 
 <script>

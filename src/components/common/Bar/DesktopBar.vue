@@ -7,6 +7,6 @@
       :key="color"
       x-small
       icon
-    ></button>
+    />
   </v-sheet>
 </template>

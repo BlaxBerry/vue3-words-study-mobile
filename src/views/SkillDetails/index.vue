@@ -1,17 +1,29 @@
 <template>
-  <v-sheet>
+  <div>
     <!-- title -->
-    <h1 id="text-jp" class="text-center">
-      {{ currentSkill.name }}
-    </h1>
-    <v-col></v-col>
+    <v-col>
+      <h1 class="text-center">
+        {{ currentSkill.name }}
+      </h1>
+    </v-col>
+
     <v-divider></v-divider>
 
     <!-- relevance -->
     <v-col>
-      <h1 id="text-en">Relevance Skills:</h1>
+      <h2>Relevance Skills:</h2>
+      <br />
+      <Cards :list="relevanceList" />
+      <br />
     </v-col>
-    <Cards :list="relevanceList" />
+
+    <v-divider></v-divider>
+
+    <!-- relevance -->
+    <v-col>
+      <h2>Relevance Projects:</h2>
+      <br />
+    </v-col>
 
     <!-- <v-img
       :src="
@@ -23,7 +35,8 @@
       class="white"
       width="60"
     /> -->
-  </v-sheet>
+    <br>
+  </div>
 </template>
 
 <script>

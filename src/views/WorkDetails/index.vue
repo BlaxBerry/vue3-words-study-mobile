@@ -1,8 +1,8 @@
 <template>
-  <div id="text-jp">
+  <div>
     <!-- title -->
     <v-col>
-      <h1 id="text-jp" class="text-center">
+      <h1 class="text-center">
         {{ currentWork.name }}
       </h1>
     </v-col>
@@ -10,15 +10,17 @@
     <v-divider></v-divider>
 
     <!-- tech tasks skills-->
-    <v-col></v-col>
-    <Cards :list="techTask" />
-    <v-col></v-col>
+    <v-col>
+      <br />
+      <Cards :list="techTask" />
+      <br />
+    </v-col>
 
     <!-- description-->
     <v-col>
       <h2>About This Project</h2>
       <br />
-      <p>about this project</p>
+      <p v-html="currentWork.description" />
     </v-col>
 
     <v-divider></v-divider>
@@ -27,7 +29,16 @@
     <v-col>
       <h2>What I Have Done ?</h2>
       <br />
-      <p>I did .... duing developing.</p>
+      <p v-html="currentWork.detail" />
+    </v-col>
+
+    <v-divider></v-divider>
+
+    <!-- extras-->
+    <v-col>
+      <h2>Extra Information ?</h2>
+      <br />
+      <p v-html="currentWork.extra" />
     </v-col>
 
     <v-divider></v-divider>
@@ -42,7 +53,8 @@
           :key="index"
           cols="6"
           sm="4"
-          md="2"
+          md="3"
+          lg="2"
         >
           <v-icon x-large>{{ val.icon }}</v-icon>
           <v-btn
@@ -63,7 +75,7 @@
     <!-- images-->
     <v-col>
       <h2>Images</h2>
-      <br>
+      <br />
       <v-row>
         <v-col
           v-for="(pic, i) in currentWork.pics"
@@ -73,11 +85,13 @@
           md="4"
           lg="3"
         >
-          <v-card><v-img :src="pic" class="white" /></v-card>
+          <v-card>
+            <v-img :src="pic" class="white" />
+          </v-card>
         </v-col>
       </v-row>
     </v-col>
-    <v-col></v-col>
+    <br>
   </div>
 </template>
 

@@ -6,11 +6,12 @@
   >
     <v-img
       :src="require('@/assets/gif/speechless.gif')"
+      :lazy-src="require('@/assets/gif/speechless.gif')"
       alt="404"
     />
     <h1 class="text-h1 font-weight-black">404</h1>
     <h1>Page Not Fount...</h1>
-    <h3>back to home in ( {{ num }} ) s</h3>
+    <h3>Will Back to Home in ( {{ num }} ) s</h3>
   </div>
 </template>
 

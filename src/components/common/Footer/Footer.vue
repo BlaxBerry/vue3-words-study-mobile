@@ -2,11 +2,18 @@
   <v-footer padless v-if="!$route.meta.hidenFooter">
     <v-card dark flat tile width="100%" class="text-center">
       <v-card-text>
-        <v-btn v-for="icon in icons" :key="icon" class="mx-2" icon>
-          <v-icon size="24px" color="white">
-            {{ icon }}
-          </v-icon>
-        </v-btn>
+        <span v-for="(btn, i) in FOOTER_LINK_BTNS" :key="i">
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn class="mx-2" icon :href="btn.href" target="_blank">
+                <v-icon size="24px" color="white" v-bind="attrs" v-on="on">
+                  {{ btn.icon }}
+                </v-icon>
+              </v-btn>
+            </template>
+            <span>{{ btn.message }}</span>
+          </v-tooltip>
+        </span>
       </v-card-text>
 
       <v-divider></v-divider>
@@ -20,11 +27,10 @@
 </template>
 
 <script>
+import { FOOTER_LINK_BTNS } from "@/utils/layoutDefaultData/index";
 export default {
   data: () => ({
-    icons: ["mdi-facebook", "mdi-twitter", "mdi-linkedin", "mdi-instagram"],
+    FOOTER_LINK_BTNS,
   }),
 };
 </script>
-
-<style></style>

@@ -3,7 +3,6 @@
     <v-tabs color="cyan accent-4" left>
       <!-- top tabs -->
       <v-tab
-        id="text-jp"
         class="font-weight-black"
         v-for="tab in tabs"
         :key="tab"
@@ -14,9 +13,7 @@
       <!-- bottom content -->
       <v-tab-item v-for="(item, i) in tabItems" :key="i">
         <v-container fluid>
-          <v-col>
-            <h1 id="text-en">{{ item.name }}</h1>
-          </v-col>
+          <br/>
           <Cards
             v-for="(contentItem, index) in item.content"
             :key="index"
