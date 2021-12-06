@@ -1,11 +1,3 @@
-@mixin background-transparent {
-  background: rgba(0, 0, 0, 0) !important;
-}
-
-@mixin background-anti-transparent {
-  background: rgba(250, 250, 250, 0.9) !important;
-}
-
 @mixin middle-content {
   display: flex !important;
   justify-content: center !important;

@@ -5,7 +5,11 @@ export const OTHER = [
         type: "DEVTOOL",
         showAsMain: true,
         fileName: "other-webpack.svg",
-        relevance: []
+        relevance: [
+            "Vue.js",
+            "React.js",
+            "Vite"
+        ]
     },
     {
         name: "npm",
@@ -39,6 +43,16 @@ export const OTHER = [
             "Github"
         ]
     },
+    // docker
+    {
+        name: "Docker",
+        id: "docker",
+        type: "DEVTOOL",
+        fileName: "other-docker.svg",
+        relevance: [
+            "MongoDB"
+        ]
+    },
 
     // graphql
     {
@@ -57,14 +71,12 @@ export const OTHER = [
         name: "Apollo Client",
         id: "apollo-client",
         type: "APIQUERY",
-        showAsMain: true,
         fileName: "other-apollo-graphql.svg",
         relevance: [
             "GraphQL",
             "React.js"
         ]
     },
-
 
     // axios
     {
@@ -73,7 +85,11 @@ export const OTHER = [
         type: "APIQUERY",
         showAsMain: true,
         fileName: "other-axios.svg",
-        relevance: []
+        relevance: [
+            "JavaScript",
+            "Vue.js",
+            "React.js"
+        ]
     },
 
     // electron

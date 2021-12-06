@@ -1,5 +1,12 @@
 <template>
   <div>
+    <!-- title -->
+    <v-col>
+      <h1 class="text-center text-en">Wellcome</h1>
+      <br>
+      <v-divider></v-divider>
+    </v-col>
+
     <!-- <div
       class="404 d-flex flex-column justify-center align-center pb-4"
       :style="{ width: '100%' }"

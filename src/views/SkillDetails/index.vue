@@ -2,16 +2,16 @@
   <div>
     <!-- title -->
     <v-col>
-      <h1 class="text-center">
+      <h1 class="text-center text-en">
         {{ currentSkill.name }}
       </h1>
+      <br />
+      <v-divider></v-divider>
     </v-col>
-
-    <v-divider></v-divider>
 
     <!-- relevance -->
     <v-col>
-      <h2>Relevance Skills:</h2>
+      <h1 class="text-en">Relevance Skills:</h1>
       <br />
       <Cards :list="relevanceList" />
       <br />
@@ -21,7 +21,7 @@
 
     <!-- relevance -->
     <v-col>
-      <h2>Relevance Projects:</h2>
+      <h1 class="text-en">Relevance Projects:</h1>
       <br />
     </v-col>
 
@@ -35,7 +35,7 @@
       class="white"
       width="60"
     /> -->
-    <br>
+    <br />
   </div>
 </template>
 

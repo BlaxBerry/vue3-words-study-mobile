@@ -7,21 +7,23 @@ export const BACK = [
         showAsMain: true,
         fileName: "server-nodejs.svg",
         relevance: [
+            "JavaScript",
             "Express.js",
             "MongoDB",
-            "GraphQL"
+            "GraphQL",
+            "Axios"
         ]
     },
     {
         name: "Express.js",
         id: "express",
         type: "SERVER",
-        showAsMain: true,
         fileName: "server-nodejs-express.svg",
         relevance: [
             "Node.js",
             "MongoDB",
-            "GraphQL"
+            "GraphQL",
+            "Axios"
         ]
     },
 
@@ -55,7 +57,6 @@ export const BACK = [
         name: "Python",
         id: "python",
         type: "LANG",
-        showAsMain: true,
         fileName: "lang-python.svg",
         relevance: [
             "Ruby",

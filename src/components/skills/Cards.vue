@@ -1,11 +1,13 @@
 <template>
-  <v-row class="px-2">
+  <v-row class="px-2 d-sm-flex justify-sm-center">
     <v-col
       v-for="item in list"
       :key="item.id"
       class="d-flex child-flex pa-1"
-      cols="2"
-      sm="1"
+      cols="3"
+      sm="2"
+      md="1"
+      lg="1"
     >
       <v-tooltip bottom>
         <template v-slot:activator="{ on, attrs }">

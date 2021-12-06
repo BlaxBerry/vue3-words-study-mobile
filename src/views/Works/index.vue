@@ -1,6 +1,13 @@
 <template>
   <div>
-    <v-tabs color="accent-4" left>
+    <!-- title -->
+    <v-col>
+      <h1 class="text-center text-en">Works</h1>
+      <br />
+      <v-divider></v-divider>
+    </v-col>
+
+    <v-tabs color="accent-4" centered>
       <!-- top tabs -->
       <v-tab class="font-weight-black" v-for="tab in tabs" :key="tab">
         {{ tab }}

@@ -2,23 +2,22 @@
   <div>
     <!-- title -->
     <v-col>
-      <h1 class="text-center">
+      <h1 class="text-center text-en">
         {{ currentWork.name }}
       </h1>
+      <br />
+      <v-divider></v-divider>
     </v-col>
-
-    <v-divider></v-divider>
 
     <!-- tech tasks skills-->
     <v-col>
-      <br />
       <Cards :list="techTask" />
       <br />
     </v-col>
 
     <!-- description-->
     <v-col>
-      <h2>About This Project</h2>
+      <h1 class="text-en">About This Project</h1>
       <br />
       <p v-html="currentWork.description" />
     </v-col>
@@ -27,7 +26,7 @@
 
     <!-- details-->
     <v-col>
-      <h2>What I Have Done ?</h2>
+      <h1 class="text-en">What I Have Done ?</h1>
       <br />
       <p v-html="currentWork.detail" />
     </v-col>
@@ -36,7 +35,7 @@
 
     <!-- extras-->
     <v-col>
-      <h2>Extra Information ?</h2>
+      <h1 class="text-en">Extra Information ?</h1>
       <br />
       <p v-html="currentWork.extra" />
     </v-col>
@@ -45,7 +44,7 @@
 
     <!-- links-->
     <v-col>
-      <h2>Links</h2>
+      <h1 class="text-en">Links</h1>
       <br />
       <v-row>
         <v-col
@@ -74,7 +73,7 @@
 
     <!-- images-->
     <v-col>
-      <h2>Images</h2>
+      <h1 class="text-en">Images</h1>
       <br />
       <v-row>
         <v-col
@@ -91,7 +90,7 @@
         </v-col>
       </v-row>
     </v-col>
-    <br>
+    <br />
   </div>
 </template>
 

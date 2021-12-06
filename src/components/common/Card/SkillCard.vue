@@ -10,7 +10,7 @@
     <v-img
       :src="require(`@/assets/svg/${item.fileName}`)"
       aspect-ratio="1"
-      class="white"
+      class="grey lighten-5"
     >
       <template v-slot:placeholder>
         <v-row class="fill-height ma-0" align="center" justify="center">
@@ -29,9 +29,7 @@
 import { ELEVATIONS } from "@/utils/commonVariables/index";
 export default {
   props: ["hover", "on", "attrs", "item"],
-  data: () => ({
-    ELEVATIONS,
-  }),
+  data: () => ({ ELEVATIONS }),
 
   methods: {
     goDetailPage(id) {

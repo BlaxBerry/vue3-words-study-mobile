@@ -11,8 +11,6 @@
         :icon="item.href ? true : false"
         :x-large="!item.href ? true : false"
         depressed
-        plain
-        rounded
       >
         <v-icon v-if="item.href" large>{{ item.icon }}</v-icon>
         <strong v-else>{{ item.name }}</strong>

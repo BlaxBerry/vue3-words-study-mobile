@@ -6,7 +6,7 @@
           <v-tooltip bottom>
             <template v-slot:activator="{ on, attrs }">
               <v-btn class="mx-2" icon :href="btn.href" target="_blank">
-                <v-icon size="24px" color="white" v-bind="attrs" v-on="on">
+                <v-icon large color="white" v-bind="attrs" v-on="on">
                   {{ btn.icon }}
                 </v-icon>
               </v-btn>
@@ -18,9 +18,9 @@
 
       <v-divider></v-divider>
 
-      <v-card-text class="font-weight-black">
-        2021.12
-        <span id="text-en" class="text-h5 mx-1"> Chen </span>
+      <v-card-text class="text-h6 py-2">
+        <span class="text-subtitle-2">2021.12</span>
+        <span class="mx-2 font-weight-black text-en">Chen</span>
       </v-card-text>
     </v-card>
   </v-footer>

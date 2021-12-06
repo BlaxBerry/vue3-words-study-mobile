@@ -21,15 +21,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss">
-.v-input__slot {
-  margin-bottom: 0 !important;
-}
-.v-input__append-outer {
-  margin-left: 0 !important;
-}
-.v-messages {
-  display: none;
-}
-</style>

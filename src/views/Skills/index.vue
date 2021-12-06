@@ -1,19 +1,22 @@
 <template>
   <div>
-    <v-tabs color="cyan accent-4" left>
+    <!-- title -->
+    <v-col>
+      <h1 class="text-center text-en">Skills</h1>
+      <br />
+      <v-divider></v-divider>
+    </v-col>
+
+    <v-tabs color="accent-4" centered>
       <!-- top tabs -->
-      <v-tab
-        class="font-weight-black"
-        v-for="tab in tabs"
-        :key="tab"
-      >
+      <v-tab class="font-weight-black" v-for="tab in tabs" :key="tab">
         {{ tab }}
       </v-tab>
 
       <!-- bottom content -->
       <v-tab-item v-for="(item, i) in tabItems" :key="i">
         <v-container fluid>
-          <br/>
+          <br />
           <Cards
             v-for="(contentItem, index) in item.content"
             :key="index"

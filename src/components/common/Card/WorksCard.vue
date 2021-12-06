@@ -1,5 +1,5 @@
 <template>
-  <v-sheet class="work-card">
+  <div class="work-card">
     <v-card
       :elevation="
         hover ? ELEVATIONS.CARD_ELEVATION * 2 : ELEVATIONS.CARD_ELEVATION
@@ -12,7 +12,7 @@
 
       <!-- img -->
       <v-img
-        class="grey lighten-2"
+        class="lighten-2"
         :src="item.pics[0]"
         :lazy-src="
           item.type == 'PC'
@@ -32,19 +32,16 @@
     </v-card>
     <!-- name -->
     <h3 class="text-center mt-2" id="text-jp">{{ item.name }}</h3>
-  </v-sheet>
+  </div>
 </template>
 
 <script>
 import { ELEVATIONS } from "@/utils/commonVariables/index";
 import DesktopBar from "@/components/common/Bar/DesktopBar.vue";
 export default {
-  props: ["hover", "item"],
   components: { DesktopBar },
-
-  data: () => ({
-    ELEVATIONS,
-  }),
+  props: ["hover", "item"],
+  data: () => ({ ELEVATIONS }),
 
   methods: {
     goDetailPage(id) {

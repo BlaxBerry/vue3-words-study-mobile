@@ -1,25 +1,25 @@
 export const FRONT = [
     {
-        name: "HTML5",
+        name: "HTML 5",
         id: "html",
         type: "BASIC",
         showAsMain: true,
         fileName: "html.svg",
         relevance: [
-            "CSS3",
+            "CSS 3",
             "JavaScript"
         ]
     },
     {
-        name: "CSS3",
+        name: "CSS 3",
         id: "css",
         type: "BASIC",
         showAsMain: true,
         fileName: "css.svg",
         relevance: [
-            "Bootstrap",
             "Sass",
             "Less",
+            "Bootstrap",
             "Vuetify",
             "ElementUI",
             "Vant",
@@ -34,11 +34,10 @@ export const FRONT = [
         showAsMain: true,
         fileName: "css-sass.svg",
         relevance: [
-            "CSS3",
+            "CSS 3",
             "Less",
             "Vuetify",
             "ElementUI",
-            "Vant",
             "AntDesign",
             "MaterialUI"
         ]
@@ -49,7 +48,7 @@ export const FRONT = [
         type: "BASIC",
         fileName: "css-less.svg",
         relevance: [
-            "CSS3",
+            "CSS 3",
             "Sass",
             "Vuetify",
             "ElementUI",
@@ -64,7 +63,7 @@ export const FRONT = [
         type: "BASIC",
         fileName: "css-bootstrap.svg",
         relevance: [
-            "CSS3",
+            "CSS 3",
             "Sass",
             "Less",
             "Vuetify",
@@ -97,11 +96,11 @@ export const FRONT = [
         showAsMain: true,
         fileName: "lang-javascript.svg",
         relevance: [
-            "TypeScript",
             "jQuery",
             "Vue.js",
             "React.js",
-            "Node.js"
+            "Node.js",
+            "TypeScript",
         ]
     },
 
@@ -251,7 +250,7 @@ export const FRONT = [
             "Create-React-App",
             "React-Router-Dom",
             "Redux",
-            "GraphQL",
+            "Gatsby.js",
             "AntDesign",
             "MaterialUI"
         ]
@@ -288,6 +287,7 @@ export const FRONT = [
             "React.js",
             "Create-React-App",
             "React-Router-Dom",
+            "Vuex"
         ]
     },
     {
@@ -309,7 +309,8 @@ export const FRONT = [
         fileName: "react-ui-antdesign.svg",
         relevance: [
             "React.js",
-            "MaterialUI"
+            "MaterialUI",
+            "Sass",
         ]
     },
     {
