@@ -1,6 +1,20 @@
 <template>
   <v-app-bar app hide-on-scroll :elevation="ELEVATIONS.BAR_ELEVATION">
+    <div class="d-flex d-sm-none align-center">
+      <v-btn
+        v-for="(item, index) in NAVIGATION_LIST"
+        :key="index"
+        icon
+        :to="item.to ? item.to : null"
+        :href="item.href ? item.href : null"
+        :target="item.href ? '_blank' : null"
+      >
+        <v-icon>{{ item.icon }}</v-icon>
+      </v-btn>
+    </div>
+
     <v-spacer></v-spacer>
+
     <div class="d-none d-sm-flex align-center">
       <v-btn
         v-for="(item, index) in NAVIGATION_LIST"

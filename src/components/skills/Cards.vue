@@ -5,7 +5,7 @@
       :key="item.id"
       class="d-flex child-flex pa-1"
       cols="3"
-      sm="2"
+      sm="1"
       md="1"
       lg="1"
     >

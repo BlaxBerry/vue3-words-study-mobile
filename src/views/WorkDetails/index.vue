@@ -20,27 +20,33 @@
       <h1 class="text-en">About This Project</h1>
       <br />
       <p v-html="currentWork.description" />
+      <v-divider></v-divider>
     </v-col>
-
-    <v-divider></v-divider>
 
     <!-- details-->
-    <v-col>
-      <h1 class="text-en">What I Have Done ?</h1>
+    <v-col v-show="currentWork.details">
+      <h1 class="text-en">Project Details</h1>
       <br />
-      <p v-html="currentWork.detail" />
+      <Details :list="currentWork.details" />
+      <br />
+      <v-divider></v-divider>
     </v-col>
 
-    <v-divider></v-divider>
+    <!-- what i have done (in team work)-->
+    <v-col v-show="currentWork.teamwork">
+      <h1 class="text-en">What I Have Done ?</h1>
+      <br />
+      <p v-html="currentWork.teamwork" />
+      <v-divider></v-divider>
+    </v-col>
 
     <!-- extras-->
-    <v-col>
+    <v-col v-show="currentWork.extra">
       <h1 class="text-en">Extra Information ?</h1>
       <br />
       <p v-html="currentWork.extra" />
+      <v-divider></v-divider>
     </v-col>
-
-    <v-divider></v-divider>
 
     <!-- links-->
     <v-col>
@@ -67,9 +73,9 @@
           </v-btn>
         </v-col>
       </v-row>
+      <br />
+      <v-divider></v-divider>
     </v-col>
-
-    <v-divider></v-divider>
 
     <!-- images-->
     <v-col>
@@ -79,13 +85,13 @@
         <v-col
           v-for="(pic, i) in currentWork.pics"
           :key="i"
-          cols="12"
-          sm="6"
-          md="4"
-          lg="3"
+          :cols="currentWork.type == 'PC' ? 12 : 6"
+          :sm="currentWork.type == 'PC' ? 6 : 4"
+          :md="currentWork.type == 'PC' ? 4 : 2"
+          :lg="currentWork.type == 'PC' ? 4 : 2"
         >
           <v-card>
-            <v-img :src="pic" class="white" />
+            <v-img :src="pic" :lazy-src="pic" class="white" />
           </v-card>
         </v-col>
       </v-row>
@@ -96,6 +102,7 @@
 
 <script>
 import Cards from "@/components/skills/Cards.vue";
+import Details from "./DetailsDetail.vue";
 import { PC, MOBILE } from "@/utils/worksData/index";
 import { FRONT, BACK, OTHER } from "@/utils/skillsData/index";
 const WORKS_ALL = [...PC, ...MOBILE];
@@ -103,7 +110,7 @@ const SKILLS_ALL = [...FRONT, ...BACK, ...OTHER];
 
 export default {
   name: "WorkDetails",
-  components: { Cards },
+  components: { Cards, Details },
 
   computed: {
     currentWork: function () {

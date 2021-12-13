@@ -24,7 +24,9 @@
         <v-list-item
           v-for="(item, index) in NAVIGATION_LIST"
           :key="index"
-          :to="item.to"
+          :to="item.to ? item.to : null"
+          :href="item.href ? item.href : null"
+          target="_blank"
         >
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>

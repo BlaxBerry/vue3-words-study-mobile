@@ -15,14 +15,14 @@
       <br />
       <Cards :list="relevanceList" />
       <br />
+      <v-divider></v-divider>
     </v-col>
-
-    <v-divider></v-divider>
 
     <!-- relevance -->
     <v-col>
       <h1 class="text-en">Relevance Projects:</h1>
       <br />
+      <v-divider></v-divider>
     </v-col>
 
     <!-- <v-img

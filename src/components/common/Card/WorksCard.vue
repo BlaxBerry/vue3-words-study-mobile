@@ -14,11 +14,7 @@
       <v-img
         class="lighten-2"
         :src="item.pics[0]"
-        :lazy-src="
-          item.type == 'PC'
-            ? require(`@/assets/images/works/default-pc.png`)
-            : require(`@/assets/images/works/default-mobile.png`)
-        "
+        :lazy-src="require(`@/assets/images/defaultWorks/${item.fileName}`)"
       >
         <template v-slot:placeholder>
           <v-row class="fill-height ma-0" align="center" justify="center">
