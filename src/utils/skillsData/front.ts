@@ -7,7 +7,9 @@ export const FRONT = [
         fileName: "html.svg",
         relevance: [
             "CSS 3",
-            "JavaScript"
+            "JavaScript",
+            "Vue.js",
+            "React.js",
         ]
     },
     {
@@ -112,7 +114,9 @@ export const FRONT = [
         showAsMain: true,
         fileName: "lang-typescript.svg",
         relevance: [
-            "JavaScript"
+            "JavaScript",
+            "Vue.js",
+            "React.js",
         ]
     },
 
@@ -248,11 +252,12 @@ export const FRONT = [
         fileName: "react.svg",
         relevance: [
             "Create-React-App",
+            "Gatsby.js",
             "React-Router-Dom",
             "Redux",
-            "Gatsby.js",
             "AntDesign",
-            "MaterialUI"
+            "MaterialUI",
+            "Apollo Client"
         ]
     },
     {

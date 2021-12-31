@@ -14,7 +14,7 @@
       </v-tab>
 
       <!-- bottom content -->
-      <v-tab-item v-for="(item, i) in tabItems" :key="i">
+      <v-tab-item v-for="(item, i) in tabItems" :key="i" :style="{ minHeight: '100vh' }">
         <v-container fluid>
           <Cards
             v-for="(contentItem, index) in item.content"

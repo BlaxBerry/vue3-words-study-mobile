@@ -3,7 +3,7 @@ export const PC = [
         name: "Portfolio",
         id: "portfolio202112",
         type: "PC",
-        fileName: "default-pc.png",
+        fileName: "pc-wedding.png",
         techTask: [
             "Vue.js",
             "TypeScript",
@@ -61,7 +61,7 @@ export const PC = [
         name: "Muisc Player",
         id: "musicplayer202106",
         type: "PC",
-        fileName: "default-pc.png",
+        fileName: "pc-vue-musicplayer.png",
         techTask: [
             "Vue.js",
             "Vue-Router",
@@ -71,16 +71,7 @@ export const PC = [
             "Axios",
             "npm"
         ],
-        links: {
-            demo: {
-                icon: "mdi-video",
-                link: "https://blaxberry.github.io/#/detail/work?id=01&type=pc",
-            },
-            github: {
-                icon: "mdi-github",
-                link: "https://github.com/BlaxBerry"
-            }
-        },
+        links: {},
         pics: [
             "https://github.com/BlaxBerry/vue-music-player/raw/master/public/images/search-album-01.png",
             "https://github.com/BlaxBerry/vue-music-player/raw/master/public/images/album.png",
@@ -133,7 +124,7 @@ export const PC = [
         name: "Study Document Site",
         id: "studynotessite202112",
         type: "PC",
-        fileName: "default-pc.png",
+        fileName: "pc-vuepress-stydynote.png",
         techTask: [
             "Vue.js",
             "VuePress",
@@ -167,7 +158,7 @@ export const PC = [
         name: "SAGA SunrisePark Booking System",
         id: "admin202112",
         type: "PC",
-        fileName: 'default-pc.png',
+        fileName: 'pc-wedding.png',
         techTask: [
             "React.js",
             "TypeScript",
@@ -175,7 +166,6 @@ export const PC = [
             "Gatsby.js",
             "Apollo Client",
             "GraphQL",
-            "Docker",
             "Python",
             "MongoDB",
         ],

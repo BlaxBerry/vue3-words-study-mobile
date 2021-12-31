@@ -86,6 +86,7 @@ export const OTHER = [
         showAsMain: true,
         fileName: "other-axios.svg",
         relevance: [
+            "GraphQL",
             "JavaScript",
             "Vue.js",
             "React.js"
