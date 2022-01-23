@@ -1,30 +1,21 @@
+<script setup lang="ts">
+// This starter template is using Vue 3 <script setup> SFCs
+// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
+import HelloWorld from './components/HelloWorld.vue'
+</script>
+
 <template>
-  <v-app class="text-jp">
-    <!-- top bar -->
-    <Toolbar />
-
-    <!-- right navigation drawer -->
-    <Drawer />
-
-    <!-- main views-->
-    <v-container>
-      <v-main>
-        <router-view />
-      </v-main>
-    </v-container>
-
-    <!-- bottoom footer -->
-    <Footer />
-  </v-app>
+  <img alt="Vue logo" src="./assets/logo.png" />
+  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
 </template>
 
-<script lang="ts">
-import Vue from "vue";
-import Toolbar from "@/components/common/Navigation/Toolbar.vue";
-import Drawer from "@/components/common/Navigation/Drawer.vue";
-import Footer from "@/components/common/Footer/Footer.vue";
-export default Vue.extend({
-  name: "App",
-  components: { Toolbar, Drawer, Footer },
-});
-</script>
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
