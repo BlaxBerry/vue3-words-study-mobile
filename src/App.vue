@@ -1,21 +1,31 @@
-<script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import HelloWorld from './components/HelloWorld.vue'
+<script lang="ts" setup>
+// components
+import TopHeader from "./components/layout/TopHeader.vue";
+import BottomNavigation from "./components/layout/BottomNavigation.vue";
+// store
+import { useLocalStore } from "./store/local";
+const localStore = useLocalStore();
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
-</template>
+  <el-config-provider :locale="localStore.elementPlusConfigProviderLocal">
+    <el-container style="height: 100vh">
+      <!-- top header -->
+      <el-header class="my-top-header">
+        <TopHeader />
+      </el-header>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+      <!-- page content -->
+      <el-main style="padding-top: 0">
+        <el-scrollbar>
+          <div style="padding-top: 20px">
+            <router-view></router-view>
+          </div>
+        </el-scrollbar>
+      </el-main>
+
+      <!-- mobile side bottom navigations -->
+      <BottomNavigation class="my-bottom-navigation" />
+    </el-container>
+  </el-config-provider>
+</template>
