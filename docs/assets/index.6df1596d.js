@@ -1,0 +1,1 @@
+import{$ as t,o,c as r,f as n,F as s,b as a}from"./vendor.b3e973f8.js";/* empty css                 */import{_ as c}from"./index.1493a82f.js";const d={},i=a("div",null,"word detail",-1);function _(l,m){const e=t;return o(),r(s,null,[i,n(e,{description:"description"})],64)}var x=c(d,[["render",_]]);export{x as default};

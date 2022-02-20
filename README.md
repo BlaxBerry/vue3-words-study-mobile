@@ -15,3 +15,7 @@
 [Element plus]() v2+
 
 [Vue-i18n]() v9
+
+## Images
+
+![](./public/images/home-01.png)
