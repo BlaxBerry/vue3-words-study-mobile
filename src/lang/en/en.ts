@@ -1,7 +1,24 @@
 export default {
 
-    home: {
-        title: "Home"
+    Home: {
+        title: "Home",
+        prohressTextcContent: {
+            finished: "Finished",
+            left: "Left",
+            all: "All"
+        }
+    },
+
+    List: {
+        title: "List"
+    },
+
+    My: {
+        title: "My Page"
+    },
+
+    Word: {
+        title: "Word"
     },
 
     topHeader: {

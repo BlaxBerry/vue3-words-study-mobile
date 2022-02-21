@@ -30,33 +30,6 @@
 <script lang="ts" setup>
 import { House, Notebook, User } from "@element-plus/icons-vue";
 import { useRoute } from "vue-router";
-// route
+
 const route = useRoute();
 </script>
-
-<style lang="scss" scoped>
-@import "../../styles/variables.scss";
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-
-  a {
-    flex: 1;
-    text-align: center;
-  }
-
-  i {
-    color: grey;
-    transition: 0.5s;
-  }
-}
-
-.selected {
-  i {
-    color: $color-main-2;
-    transform: scale(1.05);
-  }
-}
-</style>

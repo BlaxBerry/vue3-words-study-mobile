@@ -1,8 +1,26 @@
 export default {
 
-    home: {
-        title: "ホーム"
+    Home: {
+        title: "ホーム",
+        prohressTextcContent: {
+            finished: "完成",
+            left: "残り",
+            all: "全部"
+        }
     },
+
+    List: {
+        title: "リスト"
+    },
+
+    My: {
+        title: "マイページ"
+    },
+
+    Word: {
+        title: "単語"
+    },
+
 
     topHeader: {
         searchInputPlaceholder: "検索",

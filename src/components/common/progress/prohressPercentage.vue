@@ -1,21 +1,26 @@
 <template>
   <div class="my-prohress-percentage">
-    <el-progress type="dashboard" :percentage="70" :color="setColorPercentage">
+    <el-progress type="dashboard" :percentage="60" :color="setColorPercentage">
       <template #default="{ percentage }">
         <span class="percentage-value">{{ percentage }}%</span>
-        <span class="percentage-label">完成率</span>
+        <b class="percentage-label">
+          {{ t("Home.prohressTextcContent.finished") }}
+        </b>
       </template>
     </el-progress>
 
     <ul class="my-prohress-text-content">
-      <li>finished: 00</li>
-      <li>rested: 00</li>
-      <li>all: 00</li>
+      <li>{{ t("Home.prohressTextcContent.finished") }} : <b>9</b></li>
+      <li>{{ t("Home.prohressTextcContent.left") }} : <b>6</b></li>
+      <li>{{ t("Home.prohressTextcContent.all") }} : <b>15</b></li>
     </ul>
   </div>
 </template>
 
 <script lang="ts" setup>
+import { useI18n } from "vue-i18n";
+const { t } = useI18n();
+
 const setColorPercentage = (percentage: number) => {
   if (percentage < 30) {
     return "#6d6875";
@@ -48,7 +53,7 @@ const setColorPercentage = (percentage: number) => {
   }
 
   .my-prohress-text-content {
-    margin-left: 1rem;
+    margin-left: 2rem;
   }
 }
 </style>

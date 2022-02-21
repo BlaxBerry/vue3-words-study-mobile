@@ -1,7 +1,24 @@
 export default {
 
-    home: {
-        title: "首页"
+    Home: {
+        title: "首页",
+        prohressTextcContent: {
+            finished: "完成",
+            left: "剩余",
+            all: "全部"
+        }
+    },
+
+    List: {
+        title: "词表"
+    },
+
+    My: {
+        title: "我的"
+    },
+
+    Word: {
+        title: "单词"
     },
 
     topHeader: {

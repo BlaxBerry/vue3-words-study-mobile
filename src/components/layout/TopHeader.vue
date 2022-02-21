@@ -1,8 +1,18 @@
 <template>
-  <SiderDrawer />
+  <div v-if="route.name === 'Word'" class="my-header-mobile-word-page">
+    <el-page-header
+      :icon="ArrowLeft"
+      :content="t(`${route.name?.toString()}.title`)"
+      @back="router.go(-1)"
+    />
+    <!-- mobile side drawer -->
+    <SiderDrawer :isLeft="false" />
+  </div>
 
-  <!-- mobile search bar -->
-  <div v-if="route.name === 'List'" class="my-top-header-search-input-mobile">
+  <div v-else-if="route.name === 'List'" class="my-header-mobile-list-page">
+    <!-- mobile side drawer -->
+    <SiderDrawer />
+    <!-- mobile search bar -->
     <el-input
       v-model="inputValue"
       :placeholder="t('topHeader.searchInputPlaceholder')"
@@ -12,47 +22,31 @@
     />
   </div>
 
-  <!-- mobile title -->
-  <div v-else class="my-top-header-title-mobile">
-    <h1>{{ t("home.title") }}</h1>
+  <div v-else class="my-header-mobile-others">
+    <!-- mobile side drawer -->
+    <SiderDrawer :isLeft="true" />
+    <div class="mobile-header-title">
+      {{ t(`${route.name?.toString()}.title`) }}
+    </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { Search } from "@element-plus/icons-vue";
 import { ref } from "vue";
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 import { useI18n } from "vue-i18n";
+import { Search, ArrowLeft } from "@element-plus/icons-vue";
 // components
 import SiderDrawer from "./SiderDrawer.vue";
 
 const route = useRoute();
+const router = useRouter();
 const { t } = useI18n();
-
 const inputValue = ref("");
+
 const handlerSearch = () => {
   if (inputValue.value.trim()) {
     console.log(inputValue.value.trim());
   }
 };
 </script>
-
-<style lang="scss">
-.my-top-header-search-input-mobile {
-  width: 100%;
-
-  .el-input {
-    .el-input__inner {
-      font-size: 1.1rem !important;
-      border: 0 !important;
-    }
-  }
-}
-
-.my-top-header-title-mobile {
-  flex: 1;
-  text-align: center;
-  transform: translateX(-30px);
-  color: white;
-}
-</style>
