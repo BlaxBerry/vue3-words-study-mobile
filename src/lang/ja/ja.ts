@@ -1,5 +1,7 @@
 export default {
 
+    name: "単語勉強",
+
     Home: {
         title: "ホーム",
         prohressTextcContent: {
@@ -13,14 +15,17 @@ export default {
         title: "リスト"
     },
 
-    My: {
-        title: "マイページ"
-    },
-
     Word: {
         title: "単語"
     },
 
+    Add: {
+        title: "作成"
+    },
+
+    Edit: {
+        title: "編集"
+    },
 
     topHeader: {
         searchInputPlaceholder: "検索",

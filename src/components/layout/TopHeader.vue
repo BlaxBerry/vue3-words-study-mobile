@@ -26,13 +26,13 @@
     <!-- mobile side drawer -->
     <SiderDrawer :isLeft="true" />
     <div class="mobile-header-title">
-      {{ t(`${route.name?.toString()}.title`) }}
+      {{ titleNameComouted }}
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
+import { computed, ref } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { useI18n } from "vue-i18n";
 import { Search, ArrowLeft } from "@element-plus/icons-vue";
@@ -43,6 +43,14 @@ const route = useRoute();
 const router = useRouter();
 const { t } = useI18n();
 const inputValue = ref("");
+
+const titleNameComouted = computed(() => {
+  if (route?.name?.toString()) {
+    return t(`${route?.name?.toString()}.title`);
+  } else {
+    return t("name");
+  }
+});
 
 const handlerSearch = () => {
   if (inputValue.value.trim()) {

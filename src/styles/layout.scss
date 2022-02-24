@@ -91,3 +91,16 @@
     }
   }
 }
+
+// main
+.my-main {
+  position: relative;
+  padding: 0 !important;
+
+  .el-scrollbar {
+    .my-main-page-content {
+      padding: 20px 20px $height-navigation-bar !important;
+    }
+  }
+}
+

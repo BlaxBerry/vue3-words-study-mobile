@@ -1,6 +1,10 @@
 $height-navigation-bar: 50px;
 
-
-$color-main-1: #b21e35;
-$color-main-2: #c71f37;
-$color-mian-background: linear-gradient(to right, $color-main-1, $color-main-2);
+$color-main-1: #d64848;
+$color-main-2: #fa7d4f;
+// $color-mian-background: linear-gradient(to right, $color-main-1, $color-main-2);
+$color-mian-background: -webkit-linear-gradient(
+  left,
+  $color-main-1,
+  $color-main-2
+);

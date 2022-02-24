@@ -1,9 +1,13 @@
 <script lang="ts" setup>
+import { useRoute } from "vue-router";
 // components
 import TopHeader from "./components/layout/TopHeader.vue";
 import BottomNavigation from "./components/layout/BottomNavigation.vue";
+import WordBottomHandleButtons from "./components/word/WordBottomHandleButtons.vue";
 // store
 import { useLocalStore } from "./store/local";
+
+const route = useRoute();
 const localStore = useLocalStore();
 </script>
 
@@ -16,16 +20,25 @@ const localStore = useLocalStore();
       </el-header>
 
       <!-- page content -->
-      <el-main style="padding-top: 0">
+      <el-main class="my-main">
         <el-scrollbar>
-          <div style="padding-top: 20px">
+          <div class="my-main-page-content">
             <router-view></router-view>
           </div>
         </el-scrollbar>
       </el-main>
 
       <!-- mobile side bottom navigations -->
-      <BottomNavigation class="my-bottom-navigation" />
+      <BottomNavigation
+        v-if="!route.meta.navigationDisable"
+        class="my-bottom-navigation"
+      />
+
+      <!-- word detail handle buttons -->
+      <WordBottomHandleButtons
+        v-else
+        class="my-bottom-navigation"
+      ></WordBottomHandleButtons>
     </el-container>
   </el-config-provider>
 </template>

@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  background-color: #fafafa;
+}
+
 @import "./variables.scss";
 @import "./layout.scss";
 @import "./common.scss";

@@ -1,5 +1,7 @@
 export default {
 
+    name: "单词学习",
+
     Home: {
         title: "首页",
         prohressTextcContent: {
@@ -13,12 +15,16 @@ export default {
         title: "词表"
     },
 
-    My: {
-        title: "我的"
-    },
-
     Word: {
         title: "单词"
+    },
+
+    Add: {
+        title: "添加"
+    },
+
+    Edit: {
+        title: "修改"
     },
 
     topHeader: {

@@ -1,5 +1,7 @@
 export default {
 
+    name: "Word Study",
+
     Home: {
         title: "Home",
         prohressTextcContent: {
@@ -13,12 +15,16 @@ export default {
         title: "List"
     },
 
-    My: {
-        title: "My Page"
-    },
-
     Word: {
         title: "Word"
+    },
+
+    Add: {
+        title: "Add"
+    },
+
+    Edit: {
+        title: "Edit"
     },
 
     topHeader: {

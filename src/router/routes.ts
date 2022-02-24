@@ -15,11 +15,12 @@ export default [
         name: 'List',
         component: () => import('@/pages/List/index.vue'),
     },
-    // my
+
+    // add word
     {
-        path: '/my',
-        name: 'My',
-        component: () => import('@/pages/My/index.vue'),
+        path: '/add',
+        name: 'Add',
+        component: () => import('@/pages/Add/index.vue'),
     },
 
     // detail
@@ -30,5 +31,15 @@ export default [
         meta: {
             navigationDisable: true
         }
-    }
+    },
+
+    // edit
+    {
+        path: '/edit',
+        name: 'Edit',
+        component: () => import('@/pages/Edit/index.vue'),
+        meta: {
+            navigationDisable: true
+        }
+    },
 ]
