@@ -1,27 +1,29 @@
 <template>
+  <!-- TODO: Loading component -->
   <div v-if="apolloLoading">Loading...</div>
-  <EmptyVue v-else-if="!wordsList.length" />
-  <div v-else>
-    <ul>
-      <li v-for="(item, index) in wordsList" :key="item.id">
-        <router-link to="/word">
-          <span>{{ index }}</span>
-          {{ item.name }}
-        </router-link>
-      </li>
-    </ul>
-  </div>
+  <!-- list -->
+  <ListWordsListVue
+    v-else-if="apolloResult && apolloResult.wordsList"
+    :wordsList="wordsList"
+  />
+  <!-- empty -->
+  <EmptyVue v-else />
 </template>
 
 <script lang="ts" setup>
-import { computed } from "vue";
+import { computed, onMounted, onUpdated } from "vue";
 import { useQuery } from "@vue/apollo-composable";
+import { useWordsStore } from "../../store/words";
 import { getWordsList } from "../../lib/graphql/index";
 import EmptyVue from "../../components/common/status/Empty.vue";
+import ListWordsListVue from "../../components/list/ListWordsList.vue";
+
+const wordsStore = useWordsStore();
 
 const { result: apolloResult, loading: apolloLoading } = useQuery(getWordsList);
 
-type WordsListItem = {
+// TODO: common type
+type ExpressionsItem = {
   a: string;
   b: string;
 };
@@ -29,10 +31,18 @@ type WordsList = {
   name: string;
   id: string;
   createAt: string;
-  expressions: Array<WordsListItem> | [];
+  expressions: Array<ExpressionsItem> | [];
 };
 
 const wordsList = computed((): Array<WordsList> => {
   return apolloResult?.value?.wordsList || [];
+});
+
+// update wordsList length in store
+onMounted(() => {
+  wordsStore.updateWordsListLength(wordsList.value.length);
+});
+onUpdated(() => {
+  wordsStore.updateWordsListLength(wordsList.value.length);
 });
 </script>

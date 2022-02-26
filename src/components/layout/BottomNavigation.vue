@@ -23,9 +23,11 @@
       :span="6"
       :class="route.path === '/list' ? 'selected center' : 'center'"
     >
-      <router-link to="/list">
-        <el-icon :size="30"><Notebook /> </el-icon>
-      </router-link>
+      <el-badge :value="wordsStore.WordsList.length">
+        <router-link to="/list">
+          <el-icon :size="30"><Notebook /> </el-icon>
+        </router-link>
+      </el-badge>
     </el-col>
   </el-row>
 </template>
@@ -33,6 +35,8 @@
 <script lang="ts" setup>
 import { House, Notebook, Plus } from "@element-plus/icons-vue";
 import { useRoute } from "vue-router";
+import { useWordsStore } from "../../store/words";
 
 const route = useRoute();
+const wordsStore = useWordsStore();
 </script>

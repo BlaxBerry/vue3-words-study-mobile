@@ -28,4 +28,5 @@
 
 ![](./public/images/home-01.png)
 ![](./public/images/home-setting.png)
+![](./public/images/list-01.png)
 ![](./public/images/word-01.png)
